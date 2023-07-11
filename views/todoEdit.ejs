@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo App - Edit Todo</title>
+  <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+  <div class="todo-container">
+    <h2>Edit Product</h2>
+    <div class="todo">
+      <form action="/edit/<%= product._id %>" method="POST" class="todo-header">
+        <input type="text" name="updatedPName" value="<%= product.title %>" placeholder=" Enter updated task">
+        <input type="text" name="updatedPDes" value="<%= product.description %>" placeholder=" Enter updated task">
+        <button type="submit"><span class="fas fa-check"></span></button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
